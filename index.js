@@ -4,7 +4,13 @@ const cors = require("cors");
 require("dotenv").config();
 const port = process.env.port || 5000;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://coffee-website-dfa3e.web.app/", // Replace with your Firebase frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
