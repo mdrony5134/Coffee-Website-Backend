@@ -6,7 +6,7 @@ const port = process.env.port || 5000;
 
 app.use(
   cors({
-    origin: "https://coffee-website-dfa3e.web.app/", // Replace with your Firebase frontend URL
+    origin: "https://coffee-website-dfa3e.web.app/", 
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
